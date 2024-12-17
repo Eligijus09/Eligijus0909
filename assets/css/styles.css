@@ -1,0 +1,131 @@
+/* Set default light theme colors */
+:root {
+    --background-color-light: #f4f4f4;
+    --text-color-light: #333;
+    --header-background-light: #333;
+    --header-text-light: #fff;
+    --section-background-light: #fff;
+    --footer-background-light: #333;
+    --footer-text-light: #fff;
+    --link-color-light: #007bff;
+    --link-hover-light: #0056b3;
+}
+
+/* Dark theme colors */
+[data-theme="dark"] {
+    --background-color-light: #333;
+    --text-color-light: #f4f4f4;
+    --header-background-light: #222;
+    --header-text-light: #fff;
+    --section-background-light: #444;
+    --footer-background-light: #222;
+    --footer-text-light: #fff;
+    --link-color-light: #00bfff;
+    --link-hover-light: #1e90ff;
+}
+
+/* Body styles */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: var(--background-color-light);
+    color: var(--text-color-light);
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Header styles */
+header {
+    background-color: var(--header-background-light);
+    color: var(--header-text-light);
+    padding: 20px 0;
+    text-align: center;
+}
+
+/* Section styles */
+section {
+    margin: 20px;
+    padding: 20px;
+    background-color: var(--section-background-light);
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Links and buttons styling */
+a {
+    color: var(--link-color-light);
+    text-decoration: none;
+    font-weight: 500;
+}
+
+a:hover {
+    color: var(--link-hover-light);
+    text-decoration: underline;
+}
+
+/* Footer styles */
+footer {
+    background-color: var(--footer-background-light);
+    color: var(--footer-text-light);
+    text-align: center;
+    padding: 10px;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+/* Button for toggling theme */
+#theme-toggle {
+    background-color: var(--link-color-light);
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    font-size: 1em;
+    transition: background-color 0.3s ease;
+}
+
+#theme-toggle:hover {
+    background-color: var(--link-hover-light);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2em;
+    }
+
+    h2 {
+        font-size: 1.8em;
+    }
+
+    h3 {
+        font-size: 1.3em;
+    }
+
+    p {
+        font-size: 0.9em;
+    }
+
+    section {
+        margin: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 1.6em;
+    }
+
+    h2 {
+        font-size: 1.5em;
+    }
+
+    h3 {
+        font-size: 1.2em;
+    }
+
+    p {
+        font-size: 0.8em;
+    }
+}
+
