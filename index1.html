@@ -1,36 +1,119 @@
-<!-- Eligijus -->
 <!DOCTYPE html>
 <html lang="lt">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Asmeninė svetainė su Resume, Apie ir Portfolio skiltimis.">
-    <title>Mano Asmeninė Svetainė</title>
+    <meta name="description" content="Asmeninė svetainė su Resume, Apie ir Portfolio skiltimis."> 
+
+    <title>EKompiuteriai</title>
 
     <link href="assets/img/favicon.png" rel="icon">
     <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
 
     <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-    <link href="assets/css/styles.css" rel="stylesheet"> 
+    <link href="assets/css/styles.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+
+    <style>
+        .form-group {
+            margin-bottom: 15px;
+        }
+        .result {
+            margin-top: 20px;
+        }
+        .clock {
+            font-size: 2em;
+            text-align: center;
+            margin: 20px;
+        }
+        .visible {
+            display: block;
+        }
+        #scroll-to-top {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            font-size: 30px;
+            cursor: pointer;
+            display: none; 
+        }
+
+        h1 {
+            color: #007bff; 
+        }
+        body[data-theme='dark'] h1 {
+            color: #ffffff; 
+        }
+
+        footer {
+            background-color: #f8f9fa;
+            padding: 20px;
+            text-align: center;
+        }
+
+        body[data-theme='dark'] footer {
+            background-color: #343a40; 
+            color: #ffffff; 
+        }
+
+        .social-icons a {
+            color: #007bff;
+            margin: 0 10px;
+            font-size: 24px;
+            text-decoration: none;
+        }
+
+        body[data-theme='dark'] .social-icons a {
+            color: #ffffff; 
+        }
+
+        .error {
+            color: red;
+            background-color: #f8d7da;
+            padding: 10px;
+            margin-top: 10px;
+            border-radius: 5px;
+        }
+    </style>
 </head>
 <body>
     <header>
-        <h1>Parduotuvė EKompiuteriai</h1>
+        <div class="header-content">
+            <img src="assets/img/logo.png" alt="EKompiuteriai Logo" class="logo">
+            <h1>EKompiuteriai</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#about">Apie Mus</a></li>
+                <li><a href="#resume">Aprašymas</a></li>
+                <li><a href="#portfolio">Išpardavimas</a></li>
+                <li><a href="#services">Paslaugos</a></li>
+                <li><a href="#contact">Kontaktai</a></li>
+            </ul>
+        </nav>
     </header>
+
+    <div id="clock" class="clock"></div>
 
     <section id="about">
         <h2>Apie Mus</h2>
         <p>Parduodame naujus bei naudotus kompiuterius geriausia kaina visoje Lietuvoje.</p>
+        <div class="svg-container">
+            <svg width="200" height="200" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="100" cy="100" r="80" stroke="blue" stroke-width="4" fill="lightblue" />
+                <text x="100" y="110" font-size="20" text-anchor="middle" fill="black">Matematinė</text>
+                <text x="100" y="135" font-size="20" text-anchor="middle" fill="black">Grafinė Iliustracija</text>
+            </svg>
+        </div>
     </section>
 
     <section id="resume">
         <h2>Aprašymas</h2>
         <h3>Patirtis</h3>
-        <p>Prekiaujame kompiuteriais jau 5 metus! 100% teigiami atsiliepimai</p>
-        <h3>Kalėdins išpardavimas</h3>
+        <p>Prekiaujame kompiuteriais jau 5 metus! 100% teigiami atsiliepimai.</p>
+        <h3>Kalėdinis Išpardavimas</h3>
         <p>Visiems kompiuteriams taikomos 5-25% nuolaidos!</p>
 
-        <!-- Button to toggle theme -->
         <button id="theme-toggle">Šviesus/Tamsus režimas</button>
     </section>
 
@@ -38,47 +121,209 @@
         <h2>Išpardavimas</h2>
         <div class="portfolio-item">
             <img src="images/project1.jpg" alt="Pavyzdinis darbas 1">
-            <p>Mėnesio pasiūlymas. Galingas kompiuteris žaidimams vos 1000 eurų</p>
+            <p>Mėnesio pasiūlymas. Galingas kompiuteris žaidimams vos 1000 eurų.</p>
         </div>
         <div class="portfolio-item">
             <img src="images/project2.jpg" alt="Pavyzdinis darbas 2">
-            <p>Galingiausias šiuo metu turimas kompiuteris, kaina 5500 eurų</p>
+            <p>Galingiausias šiuo metu turimas kompiuteris, kaina 5500 eurų.</p>
         </div>
     </section>
 
     <section id="services">
         <h2>Paslaugos</h2>
-
+        
         <h3>Vaizdo Įrašas</h3>
+        <div class="video-container">
+            <iframe width="640" height="360" src="https://www.youtube.com/embed/ujihdHQu7Fc" title="YouTube video" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen style="border: none;"></iframe>
+        </div>
+
+        <h3>Audio</h3>
+        <audio controls>
+            <source src="audio/demo.mp3" type="audio/mp3">
+            Jūsų naršyklė nepalaiko šio garso formato.
+        </audio>
+
+        <h3>Rekomenduojamas Video</h3>
         <video width="640" height="360" controls>
             <source src="videos/intro.mp4" type="video/mp4">
-            Jūsų naršyklė nepalaiko video formato.
+            Jūsų naršyklė nepalaiko šio vaizdo formato.
         </video>
 
-        <h3>Rekomenduojame Peržiūrėti</h3>
-        <iframe width="640" height="360" 
-            src="https://www.youtube.com/embed/ujihdHQu7Fc" 
-            title="YouTube vaizdo įrašas" 
-            frameborder="0" 
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-            allowfullscreen>
-        </iframe>
-
-        <h3>Garso Įrašas</h3>
-        <audio controls>
-            <source src="audio/demo.mp3" type="audio/mpeg">
-            Jūsų naršyklė nepalaiko garso formato.
-        </audio>
     </section>
 
+    <section id="contact">
+        <h2>Kontaktai</h2>
+        <form id="contactForm">
+            <div class="form-group">
+                <label for="firstName">Vardas</label>
+                <input type="text" id="firstName" name="firstName" required>
+            </div>
+            <div class="form-group">
+                <label for="lastName">Pavardė</label>
+                <input type="text" id="lastName" name="lastName" required>
+            </div>
+            <div class="form-group">
+                <label for="email">El. paštas</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+                <label for="phone">Telefonas</label>
+                <input type="text" id="phone" name="phone" required>
+            </div>
+            <div class="form-group">
+                <label for="address">Adresas</label>
+                <input type="text" id="address" name="address" required>
+            </div>
+            <div class="form-group">
+                <label for="question1">Kaip įvertintumėte aptarnavimo kokybę?</label>
+                <input type="number" id="question1" name="question1" min="1" max="10" required>
+            </div>
+            <div class="form-group">
+                <label for="question2">Kaip įvertintumėte prekių bei paslaugų kainas?</label>
+                <input type="number" id="question2" name="question2" min="1" max="10" required>
+            </div>
+            <div class="form-group">
+                <label for="question3">Kaip įvertintumėte puslapio efektyvumą?</label>
+                <input type="number" id="question3" name="question3" min="1" max="10" required>
+            </div>
+            <div class="form-group">
+                <label for="question4">Kaip įvertintumėte pristatymo terminus?</label>
+                <input type="number" id="question4" name="question4" min="1" max="10" required>
+            </div>
+            <div class="form-group">
+                <label for="question5">Kaip įvertintumėte prekių bei paslaugų kokybę?</label>
+                <input type="number" id="question5" name="question5" min="1" max="10" required>
+            </div>
+            <button type="button" onclick="submitForm()">Pateikti</button>
+        </form>
+
+        <div id="result" class="result">
+            <p>Rezultatai pasirodys čia.</p>
+        </div>
+    </section>
+
+    <button id="scroll-to-top">↑</button>
+
     <footer>
-        <p>&copy; 2024 Eligijus</p>
+        <div class="social-icons">
+            <a href="https://facebook.com" target="_blank" class="fab fa-facebook"></a>
+            <a href="https://instagram.com" target="_blank" class="fab fa-instagram"></a>
+        </div>
     </footer>
 
-    <!-- Link to JavaScript file -->
-    <script src="assets/js/functions.js"></script>
+    <script src="assets/js/main.js"></script>
+    <script>
+        const themeToggleButton = document.getElementById('theme-toggle');
+
+        const currentTheme = localStorage.getItem('theme') || 'dark';
+        document.body.setAttribute('data-theme', currentTheme);
+
+        function toggleTheme() {
+            const currentTheme = document.body.getAttribute('data-theme');
+            
+            const newTheme = currentTheme === 'light' ? 'dark' : 'light';
+            
+            document.body.setAttribute('data-theme', newTheme);
+            
+            localStorage.setItem('theme', newTheme);
+        }
+
+        themeToggleButton.addEventListener('click', toggleTheme);
+
+        const scrollToTopButton = document.getElementById('scroll-to-top');
+
+        window.onscroll = function() {
+            if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
+                scrollToTopButton.style.display = 'block'; 
+            } else {
+                scrollToTopButton.style.display = 'none'; 
+            }
+        };
+
+        scrollToTopButton.addEventListener('click', function() {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth' 
+            });
+        });
+
+        function updateClock() {
+            const now = new Date();
+            const hours = String(now.getHours()).padStart(2, '0');
+            const minutes = String(now.getMinutes()).padStart(2, '0');
+            const seconds = String(now.getSeconds()).padStart(2, '0');
+            document.getElementById('clock').textContent = `${hours}:${minutes}:${seconds}`;
+        }
+
+        setInterval(updateClock, 1000);
+
+        function validateEmail(email) {
+            const regex = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/;
+            return regex.test(email);
+        }
+
+        function validatePhone(phone) {
+            const cleanedPhone = phone.replace(/\D/g, '');  // Pašalina simbolius
+            const regex = /^(\+?\d{1,3})?(\d{9,12})$/;  // Tikrina, ar numeris atitinka standartus
+            return regex.test(cleanedPhone);
+        }
+
+        function validateAddress(address) {
+            return address.trim().length > 0;
+        }
+
+        function submitForm() {
+            const form = document.getElementById('contactForm');
+            const resultContainer = document.getElementById('result');
+            const errorContainer = document.createElement('div');
+            errorContainer.classList.add('error');
+            errorContainer.innerHTML = ''; // Clear previous errors
+            
+            const email = form.elements['email'].value;
+            const phone = form.elements['phone'].value;
+            const address = form.elements['address'].value;
+            
+            // Validate the inputs
+            if (!validateEmail(email)) {
+                errorContainer.innerHTML += 'Neteisingas el. pašto adresas.<br>';
+            }
+            if (!validatePhone(phone)) {
+                errorContainer.innerHTML += 'Neteisingas telefono numeris.<br>';
+            }
+            if (!validateAddress(address)) {
+                errorContainer.innerHTML += 'Adresas negali būti tuščias.<br>';
+            }
+
+            if (errorContainer.innerHTML !== '') {
+                document.body.appendChild(errorContainer); // Show errors
+                return;
+            }
+
+            const firstName = form.elements['firstName'].value;
+            const lastName = form.elements['lastName'].value;
+
+            const questions = [
+                parseInt(form.elements['question1'].value),
+                parseInt(form.elements['question2'].value),
+                parseInt(form.elements['question3'].value),
+                parseInt(form.elements['question4'].value),
+                parseInt(form.elements['question5'].value)
+            ];
+
+            const sum = questions.reduce((acc, value) => acc + value, 0);
+            const average = (sum / questions.length).toFixed(2);  
+
+            resultContainer.innerHTML = `- ${firstName} ${lastName} (${email}): ${average}`;
+
+            // Apply color based on the average score
+            if (average <= 4) {
+                resultContainer.style.color = 'red';
+            } else if (average <= 7) {
+                resultContainer.style.color = 'orange';
+            } else {
+                resultContainer.style.color = 'green';
+            }
+        }
+    </script>
 </body>
 </html>
-
-
-
